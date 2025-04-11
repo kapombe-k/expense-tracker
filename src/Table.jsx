@@ -1,4 +1,4 @@
-export function Table() {
+export function Table({expense,description,category,amount,date}) {
     return (
       <div>
         <table>
@@ -10,11 +10,11 @@ export function Table() {
             <th>Date</th>
           </tr>
           <tr>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
+            <td>{expense}</td>
+            <td>{description}</td>
+            <td>{category}</td>
+            <td>{amount}</td>
+            <td>{date}</td>
           </tr>
         </table>
       </div>
