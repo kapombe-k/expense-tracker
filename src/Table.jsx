@@ -1,4 +1,4 @@
-export function Table({expense,description,category,amount,date}) {
+export  default function Table({expense,description,category,amount,date}) {
     return (
       <div>
         <table>
