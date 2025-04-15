@@ -7,12 +7,14 @@ export default function Form() {
     category: "",
     amount: "",
     date: "",
-  });
+    });// this captures form data into an object
 
+  console.log(trackExpense);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log()
+    console.log("Working till here")
     setExpense({
       expense: "",
       description: "",

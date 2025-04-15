@@ -1,10 +1,12 @@
 import "./App.css";
+import Form from "./Form";
+import Table from "./Table";
+import Header from "./Header";
 
 function App() {
   return (
     <div>
       <Header />
-      <Search />
       <Form />
       <Table />
     </div>

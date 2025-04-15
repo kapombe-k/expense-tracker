@@ -1,4 +1,18 @@
-export  default function Table({expense,description,category,amount,date}) {
+import { useState } from "react";
+import Form from "./Form";
+
+export default function Table({ expense, description, category, amount, date }) {
+  const [trackExpense, setExpense] = useState({
+    expense: "",
+    description: "",
+    category: "",
+    amount: "",
+    date: "",
+  });
+
+  //const expenseData = [];
+  
+  
     return (
       <div>
         <table>
