@@ -2,6 +2,7 @@ import "./App.css";
 import Form from "./Form";
 import Table from "./Table";
 import Header from "./Header";
+import Search from "./Search";
 import { useState } from "react";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   return (
     <div>
       <Header />
+      <Search />
       <Form onAddExpense={handleAddExpense} />
       <Table expenses={expenses} />
     </div>
