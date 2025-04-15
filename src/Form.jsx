@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Form({ onAddExpense }) {
+export default function Form({ onAddExpense }) {//remeber the curly braces when destructuring
   const [trackExpense, setExpense] = useState({
     expense: "",
     description: "",
