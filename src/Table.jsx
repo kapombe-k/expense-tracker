@@ -1,35 +1,31 @@
-import { useState } from "react";
-import Form from "./Form";
-
-export default function Table({ expense, description, category, amount, date }) {
-  const [trackExpense, setExpense] = useState({
-    expense: "",
-    description: "",
-    category: "",
-    amount: "",
-    date: "",
-  });
-
+export default function Table({ expenses }) {
   //const expenseData = [];
   
   
     return (
       <div>
         <table>
-          <tr>
-            <th>Expenses</th>
-            <th>Description</th>
-            <th>Category</th>
-            <th>Amount</th>
-            <th>Date</th>
-          </tr>
-          <tr>
-            <td>{expense}</td>
-            <td>{description}</td>
-            <td>{category}</td>
-            <td>{amount}</td>
-            <td>{date}</td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Expenses</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {expenses.map((expense, index) => (
+              <tr key={index}>      
+                {/*adds aunique key for each row*/}
+                <td>{expense.expense}</td>
+                <td>{expense.description}</td>
+                <td>{expense.category}</td>
+                <td>{expense.amount}</td>
+                <td>{expense.date}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     );

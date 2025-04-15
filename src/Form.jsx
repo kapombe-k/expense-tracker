@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Form() {
+export default function Form({ onAddExpense }) {
   const [trackExpense, setExpense] = useState({
     expense: "",
     description: "",
@@ -13,8 +13,9 @@ export default function Form() {
   
   const handleSubmit = (e) => {
     e.preventDefault();
+    onAddExpense(trackExpense);
 
-    console.log("Working till here")
+    console.log("Working till here")//this part clears the form
     setExpense({
       expense: "",
       description: "",
